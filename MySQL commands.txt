@@ -1,0 +1,15 @@
+create table cabsonline (
+	request_id int auto_increment primary key,
+	customer_name VARCHAR(255) not null,
+	contact_phone VARCHAR(255) not null,
+	pick_up_unit_number VARCHAR(255),
+	pick_up_street_number VARCHAR(255) not null,
+	pick_up_street_name VARCHAR(255) not null,
+	pick_up_suburb VARCHAR(255) not null,
+	destination_suburb VARCHAR(255) not null,
+	pick_up_time DATETIME not null,
+	booking_reference_number int not null,
+	booking_time DATETIME not null,
+	UNIQUE(booking_reference_number),
+	booking_status VARCHAR(255) DEFAULT 'unassigned' not null
+);

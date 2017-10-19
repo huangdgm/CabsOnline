@@ -1,0 +1,33 @@
+<!--admin.html: the administration page-->
+<!--student number: 15920066-->
+<!--student name: Dong Huang-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CabsOnline Administration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="xhr.js"></script>
+        <script type="text/javascript" src="admin_javascript.js"></script>
+		<script type="text/javascript" src="assign_javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h2><img src="cabsonline.png" alt="logo" /> CabsOnline Administration</h2>
+        <br />
+		<input type="button" onClick="showRequest('admin_php.php')" value="Show bookings" />
+		<br /><br />
+		<table id= "tbl" border="1"></table>
+		<br />
+        <form>
+            Booking reference number: <input type="text" id="booking_reference_number" onblur="validate_booking_reference_number()" placeholder="The number you assign" />
+            <input type="button" onClick="assignRequest('assign_php.php')" value="Assign this booking" /><span id="booking_reference_number_error" class="error"></span>
+        </form>
+        <br />
+		<div id="targetDiv"></div>
+		<br />
+		<a href="booking.htm">Go to booking</a>
+		<br />
+		<p>Note: Click 'Show bookings' button will show all the bookings with a pick-up time within 2 hours from now only.</p>
+    </body>
+</html>

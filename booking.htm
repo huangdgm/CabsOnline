@@ -1,0 +1,70 @@
+<!--booking.html: the booking page-->
+<!--student number: 15920066-->
+<!--student name: Dong Huang-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CabsOnline</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="xhr.js"></script>
+        <script type="text/javascript" src="booking_javascript.js"></script>
+		<script type="text/javascript" src="validate_and_send_request.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h2><img src="cabsonline.png" alt="logo" /> CabsOnline</h2>
+        <br />
+        <form id="booking_form">
+            <table>
+                <tr>
+                    <td>Customer name(*):</td>
+                    <td><input type="text" id="customer_name" onblur="validate_customer_name()" placeholder="Your name"><span id="customer_name_error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Contact phone(*):</td>
+                    <td><input type="text" id="contact_phone" onblur="validate_contact_phone()" title="Can only contain numbers" placeholder="Your phone"><span id="contact_phone_error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Pick-up address:</td>
+                    <td>
+						<table>
+							<tr>
+								<td>Unit number:</td>
+								<td><input type="text" id="pick_up_unit_number" onblur="validate_pick_up_unit_number()" title="Optional" placeholder="Unit number"><span id="pick_up_unit_number_error" class="error"></span></td>
+							</tr>
+							<tr>
+								<td>Street number(*):</td>
+								<td><input type="text" id="pick_up_street_number" onblur="validate_pick_up_street_number()" placeholder="Street number"><span id="street_number_error" class="error"></span></td>
+							</tr>
+							<tr>
+								<td>Street name(*):</td>
+								<td><input type="text" id="pick_up_street_name" onblur="validate_pick_up_street_name()" placeholder="Street name"><span id="street_name_error" class="error"></span></td>
+							</tr>
+							<tr>
+								<td>Suburb(*):</td>
+								<td><input type="text" id="pick_up_suburb" onblur="validate_pick_up_suburb()" placeholder="Suburb"><span id="suburb_error" class="error"></span></td>
+							</tr>
+						</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Destination suburb(*):</td>
+                    <td><input type="text" id="destination_suburb" onblur="validate_destination_suburb()" placeholder="Destination suburb"><span id="destination_suburb_error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Pick-up time(*):</td>
+                    <td><input type="datetime-local" id="pick_up_time" onblur="validate_pick_up_time()" title="Select a date time that is no earlier than the current time."><span id="pick_up_time_error" class="error"></span></td>
+                </tr>
+            </table>
+            <br />
+            <input type="button" value="Book" onClick="validate_and_send_request()" />
+        </form>
+        <br />
+		<div id="targetDiv"></div>
+		<br />
+		<a href="admin.htm">Go to administration</a>
+		<br />
+		<p>Note: The input element with type="datetime-local" do not show as any datetime field/calendar in Firefox or in IE12 and earlier versions.</p>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body
+{
+	font-size: 120%;
+}
+
+img {
+	vertical-align:middle;
+}
+
+.error {
+	color:red;
+}
+
+#targetDiv {
+	color:red;
+}
+
+h2 {
+	color:blue;
+	font-family:sans-serif;
+	font-weight:bold;
+}
+
+table td
+{
+	padding: 10px;
+	text-align: left;
+}
