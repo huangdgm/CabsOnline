@@ -4,7 +4,7 @@
 	// student name: Dong Huang
 	$sql_host="cmslamp14.aut.ac.nz";
 	$sql_user="jvb4600";
-	$sql_pass="0EqfaWxg";
+	$sql_pass="123456";
 	$sql_db="jvb4600";
 	$sql_table="cabsonline";
 ?>
